@@ -4,6 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class LDeviceUtils {
   static void hideKeyboard(BuildContext context) {
@@ -102,5 +104,13 @@ class LDeviceUtils {
 
   static bool isAndroid() {
     return Platform.isAndroid;
+  }
+
+  static void launchUrls(String url) async {
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrlString(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
