@@ -27,6 +27,7 @@ class LTexts {
       "Discover Limitless choices and Unmatched Convenience.";
   static const String email = 'E-Mail';
   static const String password = 'Password';
+   static const String submit = 'Submit';
   static const String rememberMe = 'Remember Me';
   static const String forgotPassword = "Forgot Password";
   static const String signUpTitle = "Let's create your account";
@@ -56,7 +57,8 @@ class LTexts {
   static const String createAccount = "Create Account";
   static const String orSignInWith = "or sign in with";
   static const String orSignUpWith = "or sign up with";
-  static const String iagreewith = "i agree with";
+  static const String iagreeto = "i agree to";
+  static const String and = "and";
   static const String privacyPolicy = "Privacy Policy";
   static const String termsofuse = "Terms of Use";
   static const String verificationCode = "verificationcode";

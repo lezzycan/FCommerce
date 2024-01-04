@@ -12,22 +12,20 @@ class OnBoardingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final isDark = LHelperFunctions.isDarkMode(context);
+    final isDark = LHelperFunctions.isDarkMode(context);
     return Positioned(
-        right: LSizes.defaultSpace,
-        bottom: LDeviceUtils.getBottomNavigationBarHeight() / 1.5,
-        child: ElevatedButton(
-          
-          style: ElevatedButton.styleFrom(shape: const CircleBorder(
-            
-          ),
-          backgroundColor:isDark ? LColors.buttonPrimary : Colors.black
-          ),
-            onPressed: () => OnboardingScreenController.instance.nextPage(),
-            child: const Icon(
-              Icons.arrow_forward_ios,
-             // color: Colors.white,
-              
-            ),),);
+      right: LSizes.defaultSpace,
+      bottom: LDeviceUtils.getBottomNavigationBarHeight() / 1.5,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            shape: const CircleBorder(),
+            backgroundColor: isDark ? LColors.buttonPrimary : Colors.black),
+        onPressed: () => OnboardingScreenController.instance.nextPage(),
+        child: const Icon(
+          Icons.arrow_forward_ios,
+          // color: Colors.white,
+        ),
+      ),
+    );
   }
 }
