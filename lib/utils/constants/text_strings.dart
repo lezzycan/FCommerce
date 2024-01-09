@@ -27,7 +27,7 @@ class LTexts {
       "Discover Limitless choices and Unmatched Convenience.";
   static const String email = 'E-Mail';
   static const String password = 'Password';
-   static const String submit = 'Submit';
+  static const String submit = 'Submit';
   static const String rememberMe = 'Remember Me';
   static const String forgotPassword = "Forgot Password";
   static const String signUpTitle = "Let's create your account";
@@ -64,4 +64,10 @@ class LTexts {
   static const String verificationCode = "verificationcode";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
+
+  /// Global Texts
+  static const String tContinue = "Continue";
+  static const String skip = "Skip";
+  static const String done = "Done";
+  static const String appName = "L-Store";
 }

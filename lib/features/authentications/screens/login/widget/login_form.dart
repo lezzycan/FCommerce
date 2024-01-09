@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:my_eccommerce/features/authentications/controllers/login_controller.dart';
@@ -41,9 +42,13 @@ class LLoginForm extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Checkbox(
-                    value: true,
-                    onChanged: (value) {},
+                  SizedBox(
+                     height: 24.h,
+          width: 24.w,
+                    child: Checkbox(
+                      value: true,
+                      onChanged: (value) {},
+                    ),
                   ),
                   const Text(LTexts.rememberMe)
                 ],
