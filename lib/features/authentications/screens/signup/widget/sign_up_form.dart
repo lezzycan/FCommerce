@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:my_eccommerce/features/authentications/screens/signup/verify_email.dart';
 import 'package:my_eccommerce/utils/constants/colors.dart';
 import 'package:my_eccommerce/utils/constants/sizes.dart';
 import 'package:my_eccommerce/utils/constants/text_strings.dart';
@@ -13,6 +15,7 @@ class LSignUpForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = LHelperFunctions.isDarkMode(context);
     return Form(
       child: Column(
         children: [
@@ -21,9 +24,14 @@ class LSignUpForm extends StatelessWidget {
               Expanded(
                 child: TextFormField(
                   expands: false,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                       labelText: LTexts.firstName,
-                      prefixIcon: Icon(Iconsax.user)),
+                      prefixIcon: const Icon(Iconsax.user),
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              width: 1.0,
+                              color: isDark ? Colors.white : Colors.black),
+                          borderRadius: BorderRadius.circular(18.r))),
                 ),
               ),
               const SizedBox(
@@ -32,9 +40,14 @@ class LSignUpForm extends StatelessWidget {
               Expanded(
                 child: TextFormField(
                   expands: false,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                       labelText: LTexts.lastName,
-                      prefixIcon: Icon(Iconsax.user)),
+                      prefixIcon: const Icon(Iconsax.user),
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              width: 1.0,
+                              color: isDark ? Colors.white : Colors.black),
+                          borderRadius: BorderRadius.circular(18.r))),
                 ),
               )
             ],
@@ -44,35 +57,57 @@ class LSignUpForm extends StatelessWidget {
           ),
           TextFormField(
             expands: false,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
                 labelText: LTexts.username,
-                prefixIcon: Icon(Iconsax.user_edit)),
+                prefixIcon: const Icon(Iconsax.user_edit),
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        width: 1.0,
+                        color: isDark ? Colors.white : Colors.black),
+                    borderRadius: BorderRadius.circular(18.r))),
           ),
           const SizedBox(
             height: LSizes.spaceBtwInputFields,
           ),
           TextFormField(
             expands: false,
-            decoration: const InputDecoration(
-                labelText: LTexts.email, prefixIcon: Icon(Iconsax.direct)),
+            decoration: InputDecoration(
+                labelText: LTexts.email,
+                prefixIcon: const Icon(Iconsax.direct),
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        width: 1.0,
+                        color: isDark ? Colors.white : Colors.black),
+                    borderRadius: BorderRadius.circular(18.r))),
           ),
           const SizedBox(
             height: LSizes.spaceBtwInputFields,
           ),
           TextFormField(
             expands: false,
-            decoration: const InputDecoration(
-                labelText: LTexts.phoneNo, prefixIcon: Icon(Iconsax.call)),
+            decoration: InputDecoration(
+                labelText: LTexts.phoneNo,
+                prefixIcon: const Icon(Iconsax.call),
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        width: 1.0,
+                        color: isDark ? Colors.white : Colors.black),
+                    borderRadius: BorderRadius.circular(18.r))),
           ),
           const SizedBox(
             height: LSizes.spaceBtwInputFields,
           ),
           TextFormField(
             expands: false,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
                 labelText: LTexts.password,
-                prefixIcon: Icon(Iconsax.password_check),
-                suffixIcon: Icon(Iconsax.eye_slash)),
+                prefixIcon: const Icon(Iconsax.password_check),
+                suffixIcon: const Icon(Iconsax.eye_slash),
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        width: 1.0,
+                        color: isDark ? Colors.white : Colors.black),
+                    borderRadius: BorderRadius.circular(18.r))),
           ),
           const SizedBox(
             height: LSizes.spaceBtwInputFields,
@@ -84,7 +119,8 @@ class LSignUpForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-                onPressed: () {}, child: const Text(LTexts.createAccount)),
+                onPressed: () => Get.to(() => const VerifyEmailScreen()),
+                child: const Text(LTexts.createAccount)),
           )
         ],
       ),

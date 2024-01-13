@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_eccommerce/utils/constants/colors.dart';
-import 'package:my_eccommerce/utils/constants/text_strings.dart';
 
 class LLoginDivider extends StatelessWidget {
   const LLoginDivider({

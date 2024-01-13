@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LElevatedButtonTheme {
   LElevatedButtonTheme._();
@@ -15,7 +16,7 @@ class LElevatedButtonTheme {
         side: const BorderSide(color: Colors.blue),
         padding: const EdgeInsets.symmetric(vertical: 18),
         textStyle: const TextStyle(fontSize: 16, color: Colors.white,fontWeight: FontWeight.w600),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.r))
       )
   );
 

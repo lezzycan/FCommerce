@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:my_eccommerce/common/styles/l_spacing_style.dart';
-import 'package:my_eccommerce/features/authentications/controllers/login_controller.dart';
 import 'package:my_eccommerce/features/authentications/screens/login/widget/login_divider.dart';
 import 'package:my_eccommerce/features/authentications/screens/login/widget/login_form.dart';
 import 'package:my_eccommerce/features/authentications/screens/login/widget/login_header.dart';
@@ -15,7 +13,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(LoginController());
     final isDark = LHelperFunctions.isDarkMode(context);
     return Scaffold(
       body: SingleChildScrollView(

@@ -19,6 +19,7 @@ class LTexts {
   // -- Home
   static const String homeAppbarTitle = "Good day for shopping";
   static const String homeAppbarsubTitle = "Lezzycan Junior";
+  static const String popularCategories = "Popular Categories";
 
   // -- Login
 

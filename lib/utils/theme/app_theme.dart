@@ -36,6 +36,7 @@ class LAppTheme {
     scaffoldBackgroundColor: Colors.black,
     chipTheme: LChipTheme.darkChipTheme,
     checkboxTheme: LCheckBoxTheme.darkCheckBoxTheme,
+    elevatedButtonTheme: LElevatedButtonTheme.darkElevatedButtonTheme,
     outlinedButtonTheme: LOutlinedButtonTheme.darkOutlinedButtonTheme
 
   );
