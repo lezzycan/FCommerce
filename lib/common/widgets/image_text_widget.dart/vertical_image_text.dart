@@ -24,7 +24,7 @@ class LVerticalImage extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(right: LSizes.spaceBtwItems),
+        padding: const EdgeInsets.symmetric(horizontal: LSizes.sm),
         child: Column(
           children: [
             Container(
@@ -45,7 +45,7 @@ class LVerticalImage extends StatelessWidget {
               height: LSizes.spaceBtwItems / 2,
             ),
             SizedBox(
-              width: 55.w,
+              //  width: 55.w,
               child: Text(
                 title,
                 style: Theme.of(context)

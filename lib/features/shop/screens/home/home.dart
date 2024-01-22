@@ -6,7 +6,9 @@ import 'package:my_eccommerce/common/widgets/section_header.dart';
 import 'package:my_eccommerce/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:my_eccommerce/common/widgets/searchbar.dart';
 import 'package:my_eccommerce/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:my_eccommerce/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:my_eccommerce/utils/constants/colors.dart';
+import 'package:my_eccommerce/utils/constants/image_strings.dart';
 import 'package:my_eccommerce/utils/constants/sizes.dart';
 import 'package:my_eccommerce/utils/constants/text_strings.dart';
 
@@ -15,6 +17,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -84,13 +87,21 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
+            const Padding(
+              padding: EdgeInsets.all(LSizes.md),
+              child: LPromoSlider(
+               banners:[ 
+                LImageStrings.promoBanner1,
+                 LImageStrings.promoBanner2,
+                  LImageStrings.promoBanner3,
+               ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-
 
