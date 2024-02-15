@@ -16,7 +16,7 @@ class LRoundedImage extends StatelessWidget {
     this.padding,
     this.isNetworkImage = false,
     this.onPressed,
-    this.borderRadius = LSizes.md,
+    this.borderRadius = LSizes.md, this.imageColor,
   });
   final double? width, height;
   final String imageUrl;
@@ -28,13 +28,14 @@ class LRoundedImage extends StatelessWidget {
   final bool isNetworkImage;
   final VoidCallback? onPressed;
   final double borderRadius;
+  final Color? imageColor;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        width: width ,
-        height: height ,
+        width: width,
+        height: height,
         padding: padding,
         decoration: BoxDecoration(
           border: border,
@@ -46,6 +47,7 @@ class LRoundedImage extends StatelessWidget {
               : BorderRadius.zero,
           child: Image(
             fit: fit,
+            color: imageColor,
             image: isNetworkImage
                 ? CachedNetworkImage(
                     imageUrl: imageUrl,

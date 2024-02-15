@@ -38,7 +38,7 @@ class LVerticalImage extends StatelessWidget {
               child: Image(
                 image: AssetImage(image),
                 fit: BoxFit.cover,
-                color: isDark ? LColors.textWhite : LColors.black,
+             //   color: !isDark ? LColors.textWhite : LColors.black,
               ),
             ),
             const SizedBox(

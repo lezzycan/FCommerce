@@ -10,6 +10,7 @@ class LHomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LAppBar(
+      backgroundColor:LColors.primaryColor ,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
