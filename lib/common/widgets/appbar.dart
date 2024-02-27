@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:my_eccommerce/utils/constants/sizes.dart';
 
 class LAppBar extends StatelessWidget implements PreferredSizeWidget {
   const LAppBar(
@@ -11,7 +10,8 @@ class LAppBar extends StatelessWidget implements PreferredSizeWidget {
       this.leadingIcon,
       this.actions,
       this.leadingOnPress,
-      this.centerTitle,  this.backgroundColor});
+      this.centerTitle,
+      this.backgroundColor, required this.padding});
 
   final bool showBackArrow;
   final Widget? title;
@@ -20,10 +20,11 @@ class LAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? leadingOnPress;
   final bool? centerTitle;
   final Color? backgroundColor;
+  final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: LSizes.md),
+      padding: padding,
       child: AppBar(
         backgroundColor: backgroundColor,
         automaticallyImplyLeading: false,
@@ -42,6 +43,5 @@ class LAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
-  Size get preferredSize => throw UnimplementedError();
+  Size get preferredSize => AppBar().preferredSize;
 }

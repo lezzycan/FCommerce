@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_eccommerce/common/widgets/appbar.dart';
 import 'package:my_eccommerce/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:my_eccommerce/utils/constants/colors.dart';
+import 'package:my_eccommerce/utils/constants/sizes.dart';
 import 'package:my_eccommerce/utils/constants/text_strings.dart';
 
 class LHomeAppBar extends StatelessWidget {
@@ -10,6 +11,7 @@ class LHomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LAppBar(
+      padding: EdgeInsets.symmetric(horizontal: LSizes.md),
       backgroundColor:LColors.primaryColor ,
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

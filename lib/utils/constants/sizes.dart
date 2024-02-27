@@ -67,5 +67,5 @@ class LSizes {
   static const double loadingIndicatorSize = 36.0;
 
   // Grid view spacing
-   static const doublegridViewSpacing = 16.0;
+   static const double gridViewSpacing = 16.0;
 }

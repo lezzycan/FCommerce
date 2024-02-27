@@ -6,12 +6,12 @@ import 'package:my_eccommerce/common/widgets/custom_shapes/containers/circular_c
 import 'package:my_eccommerce/common/widgets/images/rounded_images.dart';
 import 'package:my_eccommerce/features/shop/controllers/home_controllers.dart';
 import 'package:my_eccommerce/utils/constants/colors.dart';
-import 'package:my_eccommerce/utils/constants/image_strings.dart';
 import 'package:my_eccommerce/utils/constants/sizes.dart';
 
 class LPromoSlider extends StatelessWidget {
   const LPromoSlider({
-    super.key, required this.banners,
+    super.key,
+    required this.banners,
   });
   final List<String> banners;
   @override
@@ -20,8 +20,9 @@ class LPromoSlider extends StatelessWidget {
     return Column(
       children: [
         CarouselSlider(
-          items: banners.map((e) =>  LRoundedImage(imageUrl: e)).toList(),
+          items: banners.map((e) => LRoundedImage(imageUrl: e)).toList(),
           options: CarouselOptions(
+              aspectRatio: 1.5,
               viewportFraction: 1,
               onPageChanged: (index, _) =>
                   contrl.updatePageIndicatorIndex(index)),

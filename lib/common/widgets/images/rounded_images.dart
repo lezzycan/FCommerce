@@ -11,7 +11,7 @@ class LRoundedImage extends StatelessWidget {
     required this.imageUrl,
     this.applyImageRadius = true,
     this.border,
-    this.backgroundColor = LColors.lightContainer,
+    this.backgroundColor,
     this.fit,
     this.padding,
     this.isNetworkImage = false,
@@ -22,7 +22,7 @@ class LRoundedImage extends StatelessWidget {
   final String imageUrl;
   final bool applyImageRadius;
   final BoxBorder? border;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final BoxFit? fit;
   final EdgeInsetsGeometry? padding;
   final bool isNetworkImage;
@@ -38,6 +38,7 @@ class LRoundedImage extends StatelessWidget {
         height: height,
         padding: padding,
         decoration: BoxDecoration(
+          color: backgroundColor,
           border: border,
           borderRadius: BorderRadius.circular(borderRadius),
         ),

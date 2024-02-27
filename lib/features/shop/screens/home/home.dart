@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_eccommerce/common/layouts/grid_layout.dart';
 import 'package:my_eccommerce/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:my_eccommerce/common/widgets/custom_shapes/curved_edges/curved_edge_widget.dart';
 import 'package:my_eccommerce/common/widgets/products/product_cards/product_card_vertical.dart';
@@ -88,21 +89,30 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(LSizes.md),
-                  child: LPromoSlider(
+            Padding(
+              padding: const EdgeInsets.all(LSizes.md),
+              child: Column(
+                children: [
+                  const LPromoSlider(
                     banners: [
                       LImageStrings.promoBanner1,
                       LImageStrings.promoBanner2,
                       LImageStrings.promoBanner3,
                     ],
                   ),
-                ),
-              ],
+                  const SizedBox(
+                    height: LSizes.spaceBtwSections,
+                  ),
+                  LGridLayout(
+                    itemCount: 4,
+                    mainAxisExtent: 210.h,
+                    itemBuilder: (context, index) {
+                      return const LProductCardVertical();
+                    },
+                  ),
+                ],
+              ),
             ),
-            const LProductCardVertical()
           ],
         ),
       ),
